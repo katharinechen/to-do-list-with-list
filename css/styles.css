@@ -5,3 +5,15 @@
   margin: 0 auto;
   background-color: yellow;
 }*/
+
+.task-lists {
+  display: none;
+}
+
+table {
+  display: none;
+}
+
+#individual-results {
+  display: none;
+}

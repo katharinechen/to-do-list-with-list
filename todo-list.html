@@ -1,57 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="css/styles.css" rel="stylesheet">
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" text="text/css">
+  <link href="css/bootstrap.css" rel="stylesheet" text="text/css">
   <script src="js/jquery-1.11.1.js"></script>
   <script src="js/scripts.js"></script>
   <title>To-do List</title>
 </head>
 <body>
   <div class="container">
+
     <div class="row">
-
       <h1 class="text-center">Ain't Nobody Got Time for That</h1>
-      <form class="form-horizontal" role="form" id="task">
-        <fieldset class="col-md-8">
-          <legend></legend>
-          <div class="form-group">
-            <lable for="list-name" class="col-sm-4 control-label">Create a List:</lable>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="list-name" placeholder="List Name"></input>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="task-name" class="col-sm-4 control-label">Enter A Task:</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="task-name" placeholder="Pay the bills">
-            </div>
-          </br>
-            <label for="due-date" class="col-sm-4 control-label">Due Date:</label>
-            <div class="col-sm-8">
-              <input type="date" class="form-control" id="due-date" placeholder="7/14/2014">
-            </div>
-          </div>
 
-          <button type="submit" class="btn btn-default btn-block btn-success">Stress Me Out</button>
+      <div class="task-lists">
+        <h2>Lists</h2>
+        <ul class="lists"></ul>
+      </div>
+
+      <form role="form" id="new-list">
+        <fieldset id="class-fieldset" class="form-group">
+          <legend>Enter New List</legend>
+          <lable for="list-name" class="col-sm-4 control-label">Create a List:</lable>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="list-name"
+                  placeholder="List Name"></input>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submit-list">Add a List</button>
         </fieldset>
-
-        <table class="table table-hover table-condensed">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Due</th>
-            <th>Complete</th>
-          </tr>
-        <tbody class="tasks">
-        </tbody>
-        </thead>
-      </table>
-      <button type="button" class="btn btn-default btn-block btn-danger" id="clear">Clear Out</button>
       </form>
+    </div>
 
+    <div id="individual-results">
+      <h2></h2>
+      <ul id="task-list"></ul>
+      <form role="form" id="new-task">
+        <div class="form-group">
+          <label for="task">Enter a task:</label>
+          <input type="text" class="form-control" id="task" placeholder="Task">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="add-task">Add</button>
+      </form>
+    </div>
+
+
+      </div>
     </div>
   </div>
 </body>
 </html>
-
