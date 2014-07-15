@@ -20,7 +20,14 @@ $(document).ready(function() {
     $(".task-list").last().click(function() {
       currentList = list;
       var currentListName = list.listName;
+
       $("#individual-results h2").text(currentList.listName);
+
+      $("#task-list").empty();
+      currentList.tasks.forEach(function(task) {
+        $("#task-list").append("<li>" + task + "</li>");
+      });
+
       $("#individual-results").show();
 
     });
@@ -31,28 +38,13 @@ $(document).ready(function() {
     var taskNew = $("input#task").val();
 
     currentList.tasks.push(taskNew);
-    console.log(currentList);
+
+    $("#task-list").append("<li>" + taskNew + "</li>");
+    $("input#task").val("");
+
     event.preventDefault();
   });
 });
-
-
- //  $("form.new-task").submit(function(event){
- //    var inputtedTask = $("input#task-name").val();
- //    var task = { name: inputtedTask };
- //    // list.last.push(task);
-
- //    if (inputtedTask != "") {
- //      $("table").show();
- //      $("tbody.tasks").append("<tr>" + "<td class='tasks'>" + task.name + "</td>" + "<td class='due'>" + task.date + "</td>" + "<td>" + "<input type='checkbox' class='checkbox'>" + "</td>" + "</tr>");
- //    } else {
- //      alert("Please enter a task and a due date!");
- //    }
-
- //    $("input#task-name").val("");
- //     event.preventDefault();
- //  });
- // event.preventDefault();
 
 
 // $("button#clear").click(function(){
