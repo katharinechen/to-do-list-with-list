@@ -3,6 +3,7 @@ $(document).ready(function() {
   event.preventDefault();
 
   var masterList = [];
+  var currentList;
 
   $("form#new-list").submit(function(event) {
     event.preventDefault();
@@ -17,23 +18,21 @@ $(document).ready(function() {
     $("input#list-name").val("");
 
     $(".task-list").last().click(function() {
-      var currentList = list;
+      currentList = list;
+      var currentListName = list.listName;
       $("#individual-results h2").text(currentList.listName);
       $("#individual-results").show();
 
-      $("form#new-task").submit(function(event) {
-
-        var taskNew = $("input#task").val();
-
-        currentList.tasks.push(taskNew);
-        console.log(currentList);
-
-        // currentList.each(function(task) {
-        // $("#task-list").append("<li>" + task + "</li>");
-        event.preventDefault();
-      });
-
     });
+  });
+
+  $("form#new-task").submit(function(event) {
+
+    var taskNew = $("input#task").val();
+
+    currentList.tasks.push(taskNew);
+    console.log(currentList);
+    event.preventDefault();
   });
 });
 
