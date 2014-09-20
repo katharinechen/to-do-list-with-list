@@ -4,7 +4,7 @@
 This project was completed by Katharine Chen and [Nick Bernard](https://github.com/nrbernard) on Week#2, Day #2 of Epicodus Code School.  
 
 ##Description 
-This is project to build a to do list application using Objects within Objects in Javascript. The user can create multiple list, each with its own set of tasks. 
+This is a project to build a to do list application using Objects within Objects in Javascript. The user can create multiple list, each with its own set of tasks. 
 
 ##Functionality 
   
